@@ -36,7 +36,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: ./
-          target: /home/ubuntu/nestjs-app
+          target: /home/ubuntu/postgres-server
       # Step 6: SSH into the ec2 instance and docker compose down and build new compose
       - name: SSH into the ec2 instance and run commands
         uses: appleboy/ssh-action@master
@@ -45,9 +45,9 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/nestjs-app
-            docker-compose down
-            docker-compose up -d
-            
+            cd /home/ubuntu/postgres-server
+            docker compose down
+            docker compose up -d
+
             
      
