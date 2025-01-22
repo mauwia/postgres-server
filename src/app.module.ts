@@ -19,7 +19,7 @@ import { TimeSeriesModule } from './time-series/time-series.module';
       database: 'postgres',
       entities: [
         __dirname + '/**/*.entity{.ts,.js}',
-        //  __dirname + '/**/*.view{.ts,.js}'
+         __dirname + '/**/*.view{.ts,.js}'
       ],
       synchronize: true,
     }),

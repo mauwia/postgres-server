@@ -1,4 +1,14 @@
 services:
+  post:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    command: npm run start:dev
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3001:3001"
   db:
     image: postgres
     environment:

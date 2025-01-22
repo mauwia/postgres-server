@@ -13,7 +13,7 @@ export class TimeSeriesModule {
   constructor(private readonly timeSeriesService: TimeSeriesService) {}
   onModuleInit() {
     
-    this.timeSeriesService.updateBalance('0x1234', 120);
+    this.timeSeriesService.updateBalance('0x1234', 125);
 
   }
 }
